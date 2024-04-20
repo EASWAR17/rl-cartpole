@@ -18,7 +18,7 @@ Name: Easwar J
 Reg No: 212221230024
 ```
 
-```
+```Python
 def create_bins(n_bins=g_bins, n_dim=4):
 
     bins = [
@@ -31,7 +31,7 @@ def create_bins(n_bins=g_bins, n_dim=4):
     return bins
 ```
 
-```
+```Python
 def discretize_state(observation, bins):
 
     binned_state = []
@@ -43,7 +43,7 @@ def discretize_state(observation, bins):
     return tuple(binned_state)
 ```
 
-```
+```Python
 def decay_schedule(
     init_value, min_value, decay_ratio,
     max_steps, log_start = -2, log_base=10):
@@ -59,7 +59,7 @@ def decay_schedule(
     return values
 ```
 
-```
+```Python
 def generate_trajectory(
     select_action, Q, epsilon,
     env, max_steps=200):
@@ -91,7 +91,7 @@ def generate_trajectory(
 ```
 
 ## MONTE CARLO CONTROL FUNCTION
-```
+```Python
 def mc_control (env,n_bins=g_bins, gamma = 1.0,
                 init_alpha = 0.5,min_alpha = 0.01, alpha_decay_ratio = 0.5,
                 init_epsilon = 1.0, min_epsilon = 0.1, epsilon_decay_ratio = 0.9,
